@@ -2,7 +2,9 @@
 
 Aplikasi sederhana berbasis GUI yang dibuat dengan bahasa pemrograman JAVA, Program ini dibuat untuk memenuhi tugas akhir semester 2 mata kuliah Struktur Data Tentang Implementasi Metode Stack Dan Queue untuk mengelola pemesanan lapangan futsal.
 
-![]()
+![SCREENSHOT HASIL RUNNING](https://raw.githubusercontent.com/zkcodee/Project-StrukturData-UAS/master/hasil-running.png)
+
+[DEMO RUNNING](https://raw.githubusercontent.com/zkcodee/Project-StrukturData-UAS/master/demo-running.mp4)
 
 ### 🙉 Pengembang
 
