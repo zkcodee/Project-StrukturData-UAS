@@ -60,7 +60,7 @@ public class Main extends javax.swing.JFrame {
 
         DefaultTableModel model = (DefaultTableModel) tabel.getModel();
 
-        Object[] rowData = {nama_pemesan, tanggal + "/06/2024", lama_bermain, jenis_lapangan, jenis_bola, total_bayar, "SELESAI"};
+        Object[] rowData = {nama_pemesan, tanggal + "/06/2024", lama_bermain, jenis_lapangan, jenis_bola, total_bayar};
         futsal.tambahBooking(rowData);
         model.addRow(rowData);
     }
@@ -344,11 +344,11 @@ public class Main extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Nama", "Tanggal", "Lama (jam)", "Lapangan", "Bola", "Total Bayar", "Aksi"
+                "Nama", "Tanggal", "Lama (jam)", "Lapangan", "Bola", "Total Bayar"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false, false
+                false, false, false, false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -580,6 +580,7 @@ public class Main extends javax.swing.JFrame {
 
     private void BPESANActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BPESANActionPerformed
         AksiTambahBooking();
+        futsal.setTotal_biaya(0);
     }//GEN-LAST:event_BPESANActionPerformed
 
     private void BPESANMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BPESANMouseEntered
@@ -618,6 +619,7 @@ public class Main extends javax.swing.JFrame {
         DefaultTableModel model = (DefaultTableModel) tabel.getModel();
         if (tabel.getSelectedRowCount() == 1) {
             model.removeRow(tabel.getSelectedRow());
+            futsal.SelesaiBooking();
         }
     }//GEN-LAST:event_BSELESAIActionPerformed
 

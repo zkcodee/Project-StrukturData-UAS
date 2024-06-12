@@ -7,7 +7,7 @@
  *
  * @author Rifki Saputra
  */
-import java.util.LinkedList;
+import java.util.ArrayDeque;
 import java.util.Queue;
 import java.util.Stack;
 
@@ -20,13 +20,20 @@ public class Logic {
     private Stack<Object[]> stack;
     
     public Logic(){
-        bookingQueue = new LinkedList<>();
+        bookingQueue = new ArrayDeque<>();
         stack = new Stack<>();
+    }
+    
+    public void SelesaiBooking(){
+        if(!bookingQueue.isEmpty()){
+            Object[] booking = bookingQueue.poll();
+            System.out.println(booking[0]);
+            stack.push(booking);
+        }
     }
     
     public void tambahBooking(Object[] booking){
         bookingQueue.add(booking);
-        System.out.println(bookingQueue);
     }
     
     public void hitungTotalBiaya(){
